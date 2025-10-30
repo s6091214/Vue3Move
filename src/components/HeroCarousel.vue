@@ -3,7 +3,7 @@
     <h1 class="mb-4 text-5xl font-bold text-amber-50">{{ title }}</h1>
     <Swiper
       :space-between="20"
-      :slides-per-view="8"
+      :slides-per-view="6.3"
       :autoplay="{ delay: 4000 }"
       navigation
       pagination

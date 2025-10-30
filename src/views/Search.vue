@@ -72,6 +72,7 @@
       </div>
 
       <Pagination
+        v-if="searchResults[searchType]?.page"
         @change="handlePageChange"
         :currentPage="searchResults[searchType]?.page"
         :totalPages="searchResults[searchType]?.total_pages"

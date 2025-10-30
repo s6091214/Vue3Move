@@ -1,21 +1,15 @@
 <template>
   <div class="mb-8">
     <h1 class="mb-4 text-5xl font-bold text-amber-50">{{ title }}</h1>
-    <Swiper
-      :space-between="20"
-      :slides-per-view="6.3"
-      :autoplay="{ delay: 4000 }"
-      navigation
-      pagination
-      effect="fade"
-    >
+
+    <Swiper :space-between="20" :slides-per-view="6.3">
       <SwiperSlide
         v-for="slide in movieStore[type as MovieStoreKeys]?.data?.results"
         :key="slide.id"
         class="cursor-pointer"
       >
         <img
-          class="w-full object-cover"
+          class="w-full rounded-2xl object-cover"
           :src="`https://media.themoviedb.org/t/p/w220_and_h330_face${slide.poster_path}`"
           :alt="slide.title"
         />

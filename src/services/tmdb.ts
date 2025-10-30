@@ -39,6 +39,12 @@ export const getTopRatedgMovies = (page = 1) => tmdb.get("/movie/top_rated", { p
 /** 即將推出的電影 */
 export const getUpcomingMovies = (page = 1) => tmdb.get("/movie/upcoming", { params: { page } });
 
+/** 熱門電影 */
+export const getTrendingMovies = (data = "day") => tmdb.get(`/trending/movie/${data}`);
+
+/** 影片 */
+export const getVideosMovies = (id = 0) => tmdb.get(`/movie/${id}/videos`);
+
 // 取得電影詳情
 // export const getMovieDetail = (id: number) => tmdb.get(`/movie/${id}`);
 
